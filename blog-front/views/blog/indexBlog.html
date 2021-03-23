@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>创作中心</title>
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+</head>
+<body class="layui-layout-body" style="background: rgba(18,53,17,0.04)">
+<style type="text/css">
+    #div1{
+        position:absolute;
+        left:50px;
+        top:35px
+    }
+    #div2{
+        position:absolute;
+        left:200px;
+        top:35px
+    }
+    #div3{
+        position:absolute;
+        left:350px;
+        top:35px
+    }
+    #div4{
+        position:absolute;
+        left:500px;
+        top:35px
+    }
+    #div5{
+        position:absolute;
+        left:50px;
+        top:35px;
+        width: 150px;
+        height: 150px;
+    }
+    #div6{
+        position:absolute;
+        left:200px;
+        top:35px;
+        width: 150px;
+        height: 150px;
+    }
+    #div7{
+        position:absolute;
+        left:350px;
+        top:35px;
+        width: 550px;
+        height: 150px;
+    }
+</style>
+<div style="width: 75%">
+    <div class="layui-card" style="height: 150px">
+        <div class="layui-card-body">
+            <div style="float:left;">
+                <img src="" id="head" style="width: 100px;height: 100px">
+            </div>
+            <div style="position:absolute;left: 15%;top: 250%;">
+                <p id="name"></p>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card" style="height: 150px">
+        <div class="layui-card-header">常用入口</div>
+        <div class="layui-card-body">
+            <div id="div1">
+                <a class="layui-btn layui-btn-lg layui-btn-primary" id="upload">上传资源</a>
+            </div>
+            <div id="div2">
+                <a class="layui-btn layui-btn-lg layui-btn-primary">收益中心</a>
+            </div>
+            <div id="div3">
+                <a class="layui-btn layui-btn-lg layui-btn-primary">博文数据</a>
+            </div>
+            <div id="div4">
+                <a class="layui-btn layui-btn-lg layui-btn-primary">下载数据</a>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card" style="height: 240px">
+        数据与收益
+        <div class="layui-card-body">
+            <div id="div5">
+                <div>
+                    总阅读量(pv)
+                </div>
+                <div id="readCount">
+                    10
+                </div>
+            </div>
+            <div id="div6">
+                <div>
+                    总收益(总分成)
+                </div>
+                <div id="moneyCount">
+                    10
+                </div>
+            </div>
+            <div id="div7">
+                echars表格
+            </div>
+        </div>
+    </div>
+    <div class="layui-card" style="height: 250px">
+        <div class="layui-card-header">近期发布文章</div>
+        <div class="layui-card-body">
+            <div align="center">
+                图片
+            </div>
+            <div align="center">
+                您还没有发布任何文章
+            </div>
+            <div align="center">
+                <a href="">现在去发布</a>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card" style="height: 150px">
+        <div class="layui-card-header">近期发布文章</div>
+        <div class="layui-card-body">
+            <div align="center">
+                图片
+            </div>
+            <div align="center">
+                您还没有发布任何文章
+            </div>
+            <div align="center">
+                <a href="">现在去发布</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/blog/indexBlog.js"></script>
+</body>
+</html>

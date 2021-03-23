@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>菜单管理</title>
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+</head>
+<body>
+
+<div class="mb_l" style="background: rgba(242, 242, 242, 0.458823529411765)">
+    <form class="layui-form form_across" style="padding:20px 40px 10px 20px;height: none;">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">菜单编号:</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="menuId" name="menuId" placeholder="请输入菜单编号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">菜单名称:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="menuName" id="menuName" placeholder="请输入菜单名称"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">父菜单名称:</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="parentMenuName" name="parentMenuName" placeholder="请输入父菜单名称" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <button type="submit" class="layui-btn" lay-submit="select" lay-filter="select">查询</button>
+                <button type="reset" class="layui-btn layui-btn-primary">清空</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div>
+    <button class="layui-btn layui-btn-normal" id="addMenu">新增菜单</button>
+</div>
+
+<table id="menuTable" lay-filter="menuTable"></table>
+<div id="operateBar" hidden>
+    <button type="button" class="layui-btn layui-btn-normal btn_xs" lay-event="editMenu">修改菜单</button>
+    <button type="button" class="layui-btn layui-btn-normal btn_xs" lay-event="deleteMenu">删除菜单</button>
+</div>
+
+
+<div class="mb_l addMenuContent" style="display:none;">
+    <form class="layui-form form_across" lay-filter="formTest" style="margin: 45px">
+        <div class="layui-form-item">
+            <div class="layui-inline" style="display:none">
+                <label class="layui-form-label">菜单id:</label>
+                <div class="layui-input-inline">
+                    <input type="text"  name="id" placeholder="请输入菜单id" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">菜单编号:</label>
+                <div class="layui-input-inline">
+                    <input type="text"  name="menuId" placeholder="请输入菜单编号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">菜单名称:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="menuName"  placeholder="请输入菜单名称"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">url地址:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="url"  placeholder="请输入URL地址"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">父菜单名称:</label>
+                <div class="layui-input-inline">
+                    <select id="selectId" name="parentId" lay-filter="parentMenuName">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button hidden="hidden" id="button" lay-submit="formTest"  lay-filter="formTest"></button>
+    </form>
+</div>
+
+
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/basic/menu.js"></script>
+</body>
+</html>

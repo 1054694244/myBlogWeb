@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>文章</title>
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+</head>
+<body style="background: rgba(18,53,17,0.04)">
+<style type="text/css">
+
+</style>
+
+<!--引入top.html-->
+<div id="page1">
+    <iframe align="center" width="100%" height="60" frameborder="0" scrolling="no" src="http://localhost:3001/top"></iframe>
+</div>
+
+<div class="layui-row layui-col-space10" style="height: 100%">
+    <!--左边分类-->
+    <div class="layui-col-md3" align="right" style="margin-top: 10px">
+            <div>
+                <!--个人中心·-->
+                <div class="layui-card" style="width: 350px;height: 300px">
+                    <div class="layui-card-body">
+                        <!--头像-->  <!--名称 -> 码龄 -> 认证-->
+                        <div style="width: 50px;height: 50px;position:absolute;left: 15px;top:15px ">
+                            <img src="" id="head" style="width: 100px;height: 100px">
+                        </div>
+                        <div style="position: absolute;left: 130px;top: 45px;">
+                            <div>
+                                <span id="name"></span>&nbsp;&nbsp;
+                            </div>
+                            <div>
+                                <span id="age"></span>&nbsp;&nbsp;
+                                <span id="auth"></span>
+                            </div>
+                        </div>
+                        <!--原创 -> 周排名 -> 总排名 -> 访问 -> 等级-->
+                        <div>
+                            <div style="position: absolute;left: 15px;top: 130px">
+                                <div align="center" id="selfBlogNum">
+                                    1
+                                </div>
+                                <div align="center">
+                                    原创
+                                </div>
+                            </div>
+                            <div style="position: absolute;top: 130px;left: 60px">
+                                <div align="center" id="weekSort">
+                                    1
+                                </div>
+                                <div align="center">
+                                    周排名
+                                </div>
+                            </div>
+                            <div style="position: absolute;top: 130px;left: 120px">
+                                <div align="center" id="allSort">
+                                    1
+                                </div>
+                                <div align="center">
+                                    总排名
+                                </div>
+                            </div>
+                            <div style="position: absolute;top: 130px;left: 185px">
+                                <div align="center" id="readNum">
+                                    2
+                                </div>
+                                <div align="center">
+                                    访问
+                                </div>
+                            </div>
+                            <div style="position: absolute;top: 130px;left: 240px">
+                                <div align="center" id="level">
+                                    2
+                                </div>
+                                <div align="center">
+                                    等级
+                                </div>
+                            </div>
+                        </div>
+                        <!--积分 -> 粉丝-> 获赞-> 评论-> 收藏 -->
+                        <div>
+                            <div>
+                                <div style="position: absolute;left: 15px;top: 200px">
+                                    <div align="center" id="integral">
+                                        11
+                                    </div>
+                                    <div align="center">
+                                        积分
+                                    </div>
+                                </div>
+                                <div style="position: absolute;top: 200px;left: 60px">
+                                    <div align="center" id="fans">
+                                        1
+                                    </div>
+                                    <div align="center">
+                                        粉丝
+                                    </div>
+                                </div>
+                                <div style="position: absolute;top: 200px;left: 120px">
+                                    <div align="center" id="likeNum">
+                                        1
+                                    </div>
+                                    <div align="center">
+                                        获赞
+                                    </div>
+                                </div>
+                                <div style="position: absolute;top: 200px;left: 185px">
+                                    <div align="center" id="commentNum">
+                                        2
+                                    </div>
+                                    <div align="center">
+                                        评论
+                                    </div>
+                                </div>
+                                <div style="position: absolute;top: 200px;left: 240px">
+                                    <div align="center" id="collectionNum">
+                                        2
+                                    </div>
+                                    <div align="center">
+                                        收藏
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px">
+                    <!--搜索博主文章-->
+                    <div class="layui-card" style="width: 350px;height: 100px">
+                        <div class="layui-card-body">
+                            <!--搜索博主文章-->
+                            <input type="text" name="title" autocomplete="off" placeholder="搜博主文章" class="layui-input" style="width: 250px;position: absolute;left: 15px">
+                            <i class="layui-icon layui-icon-search" id="search" style="font-size: 35px; color: #1E9FFF;position: absolute;left: 265px;top: 18px"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px">
+                    <!--分类专区-->
+                    <div class="layui-card" style="width: 350px;height: 100px">
+                        <div class="layui-card-body">
+                            <!--分类专区-->
+                            123
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!--中间-->
+    <div class="layui-col-md7" id="center" style="margin-top: 10px;height: 100%">
+        <div>
+            <div>
+                <!--文章-->
+                <div class="layui-card">
+                    <div class="layui-card-body">
+                        <div>
+                            <!--标题-->
+                            你好
+                        </div>
+                        <div>
+                            <!--文章信息-->
+                            你好
+                        </div>
+                        <div>
+                            <!--文章类容-->
+                            你好
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-card" style="background-color: rgba(214,147,153,0.14)">
+                    <div class="layui-card-body">
+                        <div>
+                            <!--点赞：分享：收藏：关注：一键三连-->
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--评论-->
+                <div class="layui-card">
+                    <div class="layui-card-body">
+                        <div>
+                            <!--评论-->
+                            你好
+                        </div>
+                        <div>
+                            <!--发表评论-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-col-md2" id="right" style="margin-top: 10px;height: 100%">
+        <div>
+            <!--广告-->
+        </div>
+    </div>
+</div>
+
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/blog/readBlog.js"></script>
+</body>
+</html>

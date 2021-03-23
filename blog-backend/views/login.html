@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>SSO单点登录</title>
+    <link rel="stylesheet" href="libs/layui/css/layui.css">
+    <STYLE type="text/css">
+        #login{
+            width:400px;
+            height:280px;
+            position:absolute;
+            left: 50%;
+            top: 50%;
+            margin-left:-200px;
+            margin-top:-140px;
+            border:1px;
+            background-color: #fdfff8;
+            align:center;
+        }
+        #form{
+            width:300px;
+            height:160px;
+            position:relative;
+            left:28%;
+            top:50%;
+            margin-left:-150px;
+            margin-top:-80px;
+        }
+    </STYLE>
+</head>
+<body>
+    <div id="login">
+        <form id="form" class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">输入框</label>
+                <div class="layui-input-block">
+                    <input type="text" name="username" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" style="width: 300px" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密码框</label>
+                <div class="layui-input-block">
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" style="width: 300px" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="txd" class="ui-dialog-cont js-txd" style="display:none">
+        <div class="mb_l"style="text-align: center;">
+            <img src="" class="mt_pic" id="imgOpen">
+        </div>
+        <div class="mb_l " style="text-align: center;">
+            <div class="layui-form-item"  style="text-align: center;width:300px;border-width: 1px;border-style: solid;border-color: rgba(233, 233, 233, 1);margin: 0 auto;" >
+            </div>
+        </div>
+    </div>
+<script src="libs/layui/layui.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

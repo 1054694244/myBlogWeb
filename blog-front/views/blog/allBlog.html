@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>上传资源</title>
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+</head>
+<body style="background: rgba(255,58,61,0.01);margin: 10px">
+<style type="text/css">
+
+</style>
+<div class="layui-tab" lay-filter="title">
+    <ul class="layui-tab-title" id="title" >
+        <li class="layui-this">全部</li>
+        <li>公开</li>
+        <li>私密</li>
+        <li>审核</li>
+        <li>草稿箱</li>
+        <li>回收站</li>
+    </ul>
+    <div class="layui-tab-content" id="content">
+        <div id="div1">
+            <form class="layui-form" action="" lay-filter="formTest">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">筛选</label>
+                    </div>
+                    <div class="layui-inline" style="width: 120px">
+                        <select name="year" id="blogYear">
+                        </select>
+                    </div>
+                    <div class="layui-inline" style="width: 120px">
+                        <select name="month" id="month">
+                        </select>
+                    </div>
+                    <div class="layui-inline" style="width: 120px">
+                        <select name="type" id="blogType">
+                        </select>
+                    </div>
+                    <div class="layui-inline" style="width: 200px">
+                        <input type="text" name="keyword" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-inline">
+                        <input type="button" lay-submit="submit" class="layui-btn" lay-filter="submit" value="搜索"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="div2">
+            <table id="blog" lay-filter="blog"></table>
+            <div id="operateBar" hidden>
+                <button type="button" class="layui-btn layui-btn-normal btn_xs" lay-event="readBlog">查看</button>
+                <button type="button" class="layui-btn layui-btn-normal btn_xs" lay-event="editBlog">编辑</button>
+                <button type="button" class="layui-btn layui-btn-normal btn_xs" lay-event="deleteBlog">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="div">
+
+</div>
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/blog/allBlog.js"></script>
+</body>
+</html>

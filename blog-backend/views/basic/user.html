@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>登录人员管理</title>
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+</head>
+<body>
+
+<div class="mb_l" style="background: rgba(242, 242, 242, 0.458823529411765)">
+    <form class="layui-form form_across" style="padding:20px 40px 10px 20px;height: none;">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">人员编号:</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="userId" name="menuId" placeholder="请输入人员编号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">人员名称:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="username" id="menuName" placeholder="请输入菜单名称"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">角色:</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="roleName" name="parentMenuName" placeholder="请输入角色" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <button type="submit" class="layui-btn" lay-submit="select" lay-filter="select">查询</button>
+                <button type="reset" class="layui-btn layui-btn-primary">清空</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div>
+    <button class="layui-btn layui-btn-normal" id="addUser">新增人员</button>
+</div>
+
+<table id="userTable" lay-filter="userTable"></table>
+<div id="operateBar" hidden>
+    <button type="button" class="layui-btn layui-btn-normal btn_xs" lay-event="editUser">修改人员</button>
+    <button type="button" class="layui-btn layui-btn-normal btn_xs" lay-event="deleteUser">删除人员</button>
+</div>
+
+
+<div class="mb_l addUserContent" style="display:none;">
+    <form class="layui-form form_across" lay-filter="formTest" style="margin: 45px">
+        <div class="layui-form-item">
+            <div class="layui-inline" style="display:none">
+                <label class="layui-form-label">用户id:</label>
+                <div class="layui-input-inline">
+                    <input type="text"  name="id" placeholder="请输入用户id" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">编号:</label>
+                <div class="layui-input-inline">
+                    <input type="text"  name="userId" placeholder="请输入人员编号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">名称:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="username"  placeholder="请输入人员名称"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">密码:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="password"  placeholder="请输入人员密码"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">职位:</label>
+                <div class="layui-input-inline">
+                    <select id="roleId" name="roleId" lay-filter="roleName">
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">电话:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="phone"  placeholder="请输入电话"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">邮箱:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email"  placeholder="请输入邮箱"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <button hidden="hidden" id="button" lay-submit="formTest"  lay-filter="formTest"></button>
+    </form>
+</div>
+
+
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/basic/user.js"></script>
+</body>
+</html>
